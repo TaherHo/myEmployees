@@ -13,6 +13,7 @@ const EmployeesList = (props) => {
                     <EmployeeDetails employee={employee} key={employee._id}/>
                 )}
             </div>
+            <button className="btn btn-primary">load more</button>
         </div>
     )
 };
