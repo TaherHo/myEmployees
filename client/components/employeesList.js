@@ -7,15 +7,19 @@ import EmployeeDetails from './employeeDetails';
 const EmployeesList = (props) => {
     console.log(props);
     return (
-        <div className="employeeslist">
-            {props.employeesSubset.map((employee) => <EmployeeDetails employee={employee} key={employee._id}/>)}
+        <div>
+            <div className="employees-list">
+                {props.employeesSubset.map((employee) =>
+                    <EmployeeDetails employee={employee} key={employee._id}/>
+                )}
+            </div>
         </div>
     )
 };
 
 
-export default createContainer( () => {
+export default createContainer(() => {
     Meteor.subscribe('employeesCol');
 
-    return { employeesSubset:EmployeesCol1.find().fetch()};
-},EmployeesList);
+    return {employeesSubset: EmployeesCol1.find().fetch()};
+}, EmployeesList);
