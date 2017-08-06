@@ -5,9 +5,10 @@ import EmployeeDetails from './employeeDetails';
 
 
 const EmployeesList = (props) => {
+    console.log(props);
     return (
         <div className="employeeslist">
-            {props.employeesSubset.map((employee) => <EmployeeDetails employee=""/>)}
+            {props.employeesSubset.map((employee) => <EmployeeDetails key={employee._id}/>)}
         </div>
     )
 };
