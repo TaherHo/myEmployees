@@ -6,11 +6,15 @@ import {EmpCol} from '../../imports/collections/ourEmployees';
 const EmpList = ({employees}) => {
 
     return (
-        <div className="employees-list">
-            {employees.map(employee =>
-                <EmpDetails key= {employee._id} employee={employee}/>
-            )}
+        <div>
+            <div className="employees-list">
+                {employees.map(employee =>
+                    <EmpDetails key={employee._id} employee={employee}/>
+                )}
+            </div>
+            <button className="btn btn-primary"> Load more</button>
         </div>
+
     );
 };
 
