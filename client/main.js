@@ -1,10 +1,11 @@
 import React from 'react';
 import reactDOM from 'react-dom';
+import EmpList from './components/empListComp';
 
 const App = () => {
     return (
         <div>
-            from main-js
+            <EmpList/>
         </div>
     )
 };
