@@ -3,6 +3,7 @@ import _ from 'lodash';
 import {helpers , image} from 'faker';
 
 Meteor.startup(() => {
+
    if(!EmpCol.find({}).count()){
        _.times(2000, () => {
            const {name , email , phone} = helpers.createCard();
@@ -12,5 +13,6 @@ Meteor.startup(() => {
            });
        })
    }
-   console.log(EmpCol.find().count())
+
+   Meteor.publish('empCol', ()=> {return EmpCol.find({}, {limit:20})});
 });
