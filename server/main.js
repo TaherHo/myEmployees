@@ -14,5 +14,5 @@ Meteor.startup(() => {
        })
    }
 
-   Meteor.publish('empCol', ()=> {return EmpCol.find({}, {limit:20})});
+   Meteor.publish('empCol', (per_page)=> {return EmpCol.find({}, {limit:per_page})});
 });
