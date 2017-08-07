@@ -9,7 +9,7 @@ Meteor.startup(() => {
            const {name , email , phone} = helpers.createCard();
            EmpCol.insert({
                name , email , phone,
-               avatar : image.avatar
+               avatar : image.avatar()
            });
        })
    }
