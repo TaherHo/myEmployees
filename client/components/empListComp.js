@@ -1,9 +1,10 @@
 import React from 'react';
+import EmpDetails from './empDetailsComp';
 
 const EmpList = () =>{
     return(
         <div>
-            from empList
+            <EmpDetails />
         </div>
     );
 };
