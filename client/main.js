@@ -1,11 +1,17 @@
-import React from "react";
-import reactDOM from "react-dom";
+import React from 'react';
+import reactDOM from 'react-dom';
+import EmpList from './components/empListComp';
 
-const App = () =>{
-    return(
+const App = () => {
+    return (
         <div>
-            Hi there!
-        </div>);
+            <EmpList/>
+        </div>
+    )
 };
 
-reactDOM.render( <App/> , document.querySelector('generated-components'));
+Meteor.startup(() =>
+    {
+        reactDOM.render(<App/>, document.querySelector('.container'));
+    }
+);
